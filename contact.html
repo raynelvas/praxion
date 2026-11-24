@@ -53,7 +53,7 @@
                         <span class="info-icon">📍</span>
                         <div>
                             <strong>Ubicación</strong>
-                            <p>Ecuador - Quito - Guayllabamba</p>
+                            <p>Ecuador - Quito</p>
                         </div>
                     </div>
 
@@ -61,31 +61,34 @@
                         <span class="info-icon">📞</span>
                         <div>
                             <strong>Teléfono / WhatsApp</strong>
-                            <p>0989717542</p>
+                            <p>0968719898</p>
                         </div>
                     </div>
 
-                    <div class="info-item">
-                        <span class="info-icon">✉️</span>
-                        <div>
-                            <strong>Correo Electrónico</strong>
-                            <p>luchitov2001@gmail.com</p>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" action="#" method="POST">
+                    <form class="contact-form" id="contactForm" novalidate>
                         <h3>Envíanos un mensaje</h3>
-                        
+
                         <div class="form-group">
                             <label for="name">Nombre completo</label>
                             <input type="text" id="name" name="name" required placeholder="Ej. Juan Pérez">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Correo electrónico</label>
-                            <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+                            <label for="project">Proyecto</label>
+                            <input type="text" id="project" name="project" required placeholder="Ej. Tesis de robótica, circuito, diseño 3D...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Ubicación</label>
+                            <input type="text" id="location" name="location" required placeholder="Ej. Quito, Ecuador">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deadline">Fecha límite</label>
+                            <input type="date" id="deadline" name="deadline" required>
                         </div>
 
                         <div class="form-group">
@@ -93,19 +96,12 @@
                             <textarea id="message" name="message" rows="4" required placeholder="Cuéntanos qué necesitas (diseño 3D, programación, electrónica...)"></textarea>
                         </div>
 
-                        <button type="submit" class="btn-primary btn-full">Enviar Mensaje</button>
+                        <!-- Un único botón -->
+                        <button type="submit" class="btn-primary btn-full">
+                            Enviar por WhatsApp
+                        </button>
 
-                        <div class="project-action" style="margin-top: 1.25rem; text-align: center;">
-                            <a href="https://wa.me/593989717542/?text=Mi nombre es: El proyecto es sobre: "
-                            class="btn-secondary"
-                            style="color: var(--primary-dark); border-color: rgb(205, 215, 225);">
-                                Contactar por WhatsApp
-                            </a>
-                        </div>
-
-
-
-
+                        <p id="formStatus" class="form-status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
@@ -118,6 +114,7 @@
 
     <!-- Script para menú móvil -->
     <script src="menu.js"></script>
+    <script src="contact.js"></script>
 
 </body>
 </html>
